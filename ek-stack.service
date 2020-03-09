@@ -1,0 +1,11 @@
+[Unit]
+Description=Elasticsearch & Kibana
+
+[Service]
+Restart=on-failure
+WorkingDirectory=/opt/docker-ek
+ExecStart=/usr/local/bin/podman-compose up
+ExecStop=/usr/local/bin/podman-compose down
+
+[Install]
+WantedBy=default.target
