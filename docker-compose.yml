@@ -13,10 +13,10 @@ services:
       - discovery.type=single-node
       - bootstrap.memory_lock=true
       - "ES_JAVA_OPTS=-Xms2g -Xmx2g"
-    #ulimits:
-    #  memlock:
-    #    soft: -1
-    #    hard: -1
+    ulimits:
+      nofile:
+        soft: 65535
+        hard: 65535
 
   kibana:
     image: docker.elastic.co/kibana/kibana:7.6.1
