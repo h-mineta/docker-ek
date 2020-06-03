@@ -3,7 +3,7 @@ Description=Elasticsearch & Kibana
 
 [Service]
 Restart=on-failure
-WorkingDirectory=/opt/docker-ek
+WorkingDirectory=/opt/docker-elk-stack
 ExecStart=/usr/local/bin/podman-compose up
 ExecStop=/usr/local/bin/podman-compose down
 
